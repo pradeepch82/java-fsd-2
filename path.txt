@@ -1,0 +1,17 @@
+Mycomputer
+
+right click
+
+properties
+
+Advanced
+
+Evironemet variables
+
+New
+
+name                                     value
+
+path                          C:\j2sdk1.4.2_03\bin;
+
+classpath                    C:\j2sdk1.4.2_03\lib;.;

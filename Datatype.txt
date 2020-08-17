@@ -1,0 +1,32 @@
+Datatype               Memory			        range
+------------------------------------------------------------------------
+
+Integer
+-----------
+
+byte                     1 byte                          -128  to  +127                         
+
+short                    2 byte                     -32768  to   +32767     
+
+int                      4 byte           -2147483648 to +2147483647
+
+long                     8 byte       -9223372036854775808  to  +9223372036854775807
+
+
+Float
+---------
+
+float                    4 byte          -3.4 e38  +3.4 e38
+
+double                   8 byte          -1.7 e308  +1.7 e308
+
+
+Character
+----------------
+char                     2 bytes          0  to 65535  
+
+Boolean
+-------------
+boolean
+
+

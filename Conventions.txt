@@ -1,0 +1,86 @@
+Naming Conventions in java
+-------------------------------
+
+1.Packages should be defined in small letter
+
+Builtin
+========
+	java.lang
+	java.io
+	java.util
+	java.applet
+	java.sql
+	java.awt
+
+User defined
+=============
+com.ibm.cms.dao
+org.ibm.cms.service
+
+
+2.Each word of class or interface should start with capital letter
+
+	java.lang.System
+	java.io.InputStreamReader
+	java.io.BufferedReader
+	java.util.Date
+	
+	java.awt.event.ActionListener
+
+MyFirstJavaProgram
+
+
+3.The method name should start with small  letters and then each word should start with capital letters
+
+	println()
+	readLine()
+	getNumberInstance()
+	forName()
+
+
+
+4.The variable names should also follow above    rules.
+	
+	employeeNumber
+	employeeName
+	employeeSalary
+
+5.Constant should be defined in capital letters
+
+	final double PI=3.145;
+	
+        Font.BOLD
+	Font.ITALIC
+	Font.PLAIN
+
+
+Object Oriented Programming
+============================
+1.Class
+2.Object
+3.Encapsulation
+4.Inheritance
+5.Polymorphism
+6.Abstraction
+7.Message Communcation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	 
+

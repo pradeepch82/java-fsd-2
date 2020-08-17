@@ -1,0 +1,396 @@
+/*
+
+		Operators
+		------------------
+	Operators performs some operations on  
+	operands/variables.
+
+
+1.Arithmetic operators   (  + , - , /, *, %) 
+---------------------------------------------------------
+                       
+class Arith {
+public static void main(String args[]) {
+
+int a=100,b=20;
+
+System.out.println("a+b="+(a+b));
+System.out.println("a-b="+(a-b));
+System.out.println("a*b="+(a*b));
+System.out.println("a/b="+(a/b));
+System.out.println("a%b="+(a%b));
+}
+
+o/p
+-------
+a+b=120
+a-b=80
+a*b=2000
+a/b=5
+a%b=0
+
+
+2.Assignment operator   (=)
+----------------------------
+
+It is used to store right hand side value into left hand 
+side variable.
+
+Example
+
+	int a=10,b=20,c;
+	
+                 c=a+b;     //valid
+                 a+b=c;      //Invalid
+
+
+3.Complement operator (~)
+-------------------------------------
+
+It gives the  ones complement 
+of the number.
+
+1.Add one to the given number
+2.Change it's sign
+
+
+Example
+
+*/
+class Comp {
+public static void main(String args[]) {
+int a=10,b=-100;
+System.out.println("~a  ="+(~a));
+System.out.println("~b  ="+(~b));
+}
+}
+
+*/
+o/p
+	~a=-11
+	~b=99
+
+
+4.Relational operators (==,!=,<,<=,>,>=)
+---------------------------------------------------
+
+	These operators are used to compare two 
+values .It returns either true or false.
+
+
+is equal to                           ==
+
+is not equal to                     ! =
+
+is less than                           <
+
+is less than or equal to           <=
+
+is  greater than                      >
+
+is greater than or equal to      >=
+
+
+int a=100,b=20;
+
+
+a==b       ->         F
+
+a!=b       ->          T
+
+a<b        ->          F
+
+a<=b       ->         F
+
+a>b        ->          T
+
+a>=b       ->         T                                  
+
+
+
+5.Ternary or conditional operator ( ? :)
+---------------------------------------------------
+	This operator acts on three variables.It checks the condition, if it is true it executes the first statement else it executes the second statement.
+
+syntax:
+-------------
+	
+
+	  variable1=(condition)?variable2:variable3;
+
+
+	True -----------variable1=variable2
+	False-----------variable1=variable3
+
+
+Example
+--------------
+
+class Cond {
+public static void main(String args[])
+{
+int a=1000,b=200,max;
+
+max=(a>b)?a:b;
+
+System.out.println("Max="+max);
+}
+
+}
+
+o/p
+---
+Max=1000
+
+
+6.Logical operators
+--------------------------
+	Logical operators are used to check the multiple conditions.
+
+	Logical AND           &&
+	Logical OR                ||
+	Logical NOT              !
+
+
+Condition1            condition2                    &&             ||
+---------------------------------------------------------------   
+         F                         F                        F               F 
+         F                         T                        F               T 
+         T                         F                        F               T 
+         T                         T                        T               T 
+---------------------------------------------------------------
+
+Result                 !
+------------------------------
+    T                     F
+    F                     T
+----------------------------------
+
+
+7.Unary operators
+----------------------------
+	These operators acts on single variable.
+
+
+1.Unary minus (-)
+----------------------
+	This operator negates the value or changes the sign of the number.
+
+Example
+---------------
+	
+class Negation
+{
+public static void main(String args[])
+{
+int a=1000,b= -2000;
+-a;
+-b;
+System.out.println("a="+a);
+System.out.println("b="+b);
+}
+}
+
+o/p
+-------
+	a= -1000
+	b=2000
+
+
+2.Increment operator (++)
+-----------------------------------
+	Incremant opertor always increases the value by one.
+
+Preincrement (++a)
+-----------------------------
+	In preincrement first it increases the value by one and the in stores the value.
+
+Example
+-----------------
+	int a=10,b;
+	
+	b=++a;
+
+	1.    a=a+1=10+1=11
+	2.    b=a=11
+
+Postincrement (a++)
+-----------------------------
+	In postincrement first it stores the value and then it increases the value by one.
+
+Example
+-----------------
+	int a=10,b;
+	
+	b=a++;
+
+	1.    b=a=10=10
+	2.    a=a+1=10+1=11
+
+2   Decrement operator (--)
+-----------------------------------
+	Decremant opertor always decreases the value by one.
+
+Predecrement (--a)
+-----------------------------
+	In predecrement first it decreases the value by one and the it stores the value.
+
+Example
+-----------------
+	int a=10,b;
+	
+	b=--a;
+
+	1.    a=a-1=10-1=9
+	2.    b=a=9
+
+
+Postdecrement (a--)
+-----------------------------
+	In postdecrement first it stores the value and then it decreases the value by one.
+
+Example
+-----------------
+	int a=10,b;
+	
+	b=a--;
+
+	1.    b=a=10=10
+	2.    a=a-1=10-1=9
+
+
+
+9. Bitwise operators
+----------------------------
+
+	Bitwise operators compares internal binary format of the number.These operators are applicable in between integer variables only.
+
+	Bitwise AND                        &
+	Bitwise OR                          |
+	Bitwise XOR                        ^
+	Bitwise Left shift                 <<
+	Bitwise Right shift               >>
+
+
+A             B               &          |           ^
+----------------------------------------------
+0             0              0          0           0
+0             1              0          1           1
+1             0              0          1           1
+1             1              1          1           0
+----------------------------------------------------
+
+
+class Bit {
+
+public static void main(String args[])
+{
+
+int a=10,b=8;
+
+System.out.println("a & b="+(a & b));
+System.out.println("a | b="+(a | b));
+System.out.println("a ^ b="+(a ^ b));
+}
+}
+
+o/p=
+
+a&b=8
+a|b=10
+a^b=2
+
+
+
+Bitwise  Left shift operator (<<)
+------------------------------------------
+
+Bitwise  Left shift operator  shifts the number of bits toward left side specified number of times and fills the right side bit with zero. 
+                     Or
+Multiply the given number by specified number of powers of 2.
+
+class Ls
+{
+
+public static void mian(String args[])
+{
+int a=10;
+
+System.out.println("a<<1 ="+(a<<1));
+System.out.println("a<<2 ="+(a<<2));
+System.out.println("a<<3 ="+(a<<3));
+
+}
+
+o/p
+----
+
+a<<1=20
+a<<2=40
+a<<3=80
+
+Bitwise  Right shift operator (>>)
+------------------------------------------
+
+Bitwise  right shift operator  shifts the number of bits towards right side specified number of times fills left side bit with zero.
+                Or
+Devide the given number by specified number of powers of two.
+
+
+
+class Rs
+{
+
+public static void mian(String args[])
+{
+int a=10;
+
+System.out.println("a>>1 ="+(a>>1));
+System.out.println("a>>2 ="+(a>>2));
+System.out.println("a>>3 ="+(a>>3));
+}
+
+o/p
+----
+
+a>>1=5
+a>>2=2
+a>>3=1
+
+
+
+
+9.instanceof operator
+---------------------------
+	It is used to check whether the object belongs to particular class or not.
+
+syntax
+------------
+
+	boolean  value=object   instanceof  Class;
+
+
+*/
+
+class A
+{
+public static void main(String s[])
+{
+
+A  a=new A();
+
+boolean value=a instanceof A;
+System.out.println(value);
+}
+}
+
+
+
+
+*/
+
+
+
+
+
+
