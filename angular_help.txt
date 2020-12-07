@@ -1,7 +1,6 @@
 Angular 11
 ============
 
-https://join.skype.com/vQKDy9kVTTNd
 
 
 Features of Angular
@@ -152,7 +151,7 @@ Angular Binding types
          
            [ngModel]="name"
 
-4.Two way data binding
+5.Two way data binding
          
            [(ngModel)]="name"
      
@@ -182,6 +181,7 @@ Attribute Directve    :Won't change the HTML DOM structure
  [ngClass]
  [ngModel] =>It is applicable for only input elements > FormsModule
  [ngSwitch]
+ [routerLink]
 
 Structural Directive :Will change the HTML DOM structure
 ====================
@@ -191,7 +191,7 @@ Structural Directive :Will change the HTML DOM structure
    *ngSwitchDefault=> It is applicable for only container tags
 
 Component Directive
-==================
+====================
 
 <app-root>  </app-root>
 <app-technologies></app-technologies>
@@ -292,10 +292,14 @@ employees|orderBy:'name'   =>sort employees on name basis in ascending order
 
 employees|orderBy:'name':true   =>sort employees on name basis in descending order
 
+
+
+
 employees|filter:'searchText'
 
 npm i ng2-search-filter
 
+Ng2SearchPipeModule
 
 
 Angular Application to perform 
@@ -402,6 +406,9 @@ Parent -> child   => @Input()
 Child ->Parent  =>  @Output()  =>EventEmitter
         
          
+
+
+
 FormValidation
 =================
 1.Template Driven Forms
@@ -499,11 +506,10 @@ export class CommentsComponent {
 
 
 
-
 5.RouteParams and QueryParams
 =============================
 
-RouteParams
+RouteParams (supported by http get,post,put,delete,patch)
 ============
 https://jsonplaceholder.typicode.com/albums/1
 https://jsonplaceholder.typicode.com/posts/1
@@ -512,15 +518,13 @@ https://jsonplaceholder.typicode.com/users/1
 https://jsonplaceholder.typicode.com/comments/1
 
 
-QueryParams
+QueryParams (supported by http get method)
 ============
 https://jsonplaceholder.typicode.com/albums?userId=1
 https://jsonplaceholder.typicode.com/posts?userId=1
 https://jsonplaceholder.typicode.com/todos?userId=1
 https://jsonplaceholder.typicode.com/photos?albumId=1
 https://jsonplaceholder.typicode.com/comments?postId=1
-
-
 
 
 
