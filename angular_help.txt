@@ -721,6 +721,317 @@ https://github.com/cornflourblue/angular-7-jwt-authentication-example
 
 
 
+What is Protractor
+What is Angular and AngularJS
+What is WebdriverJS
+
+Protractor is an end-to-end test framework for Angular and AngularJS applications
+Protractor is a Node.js program built on top of WebDriverJS
+Protractor runs tests against your application running in a real browser, interacting with it as a user would
+Protractor can also be used to test non-angular applications
+
+What is AngularJS?
+
+AngularJS is a JavaScript-based open-source front-end web framework mainly maintained by Google
+Type - Open-source web application framework
+Written in - JavaScript
+Developed by - Google
+Initial release - Oct 2010
+
+Also referred to as Angular 1
+
+What is Angular ?
+
+Angular is a platform and framework for building client applications in HTML and TypeScript. Angular is written in TypeScript
+Type - Open-source web application framework
+Written in - TypeScript
+Developed by - Google
+Initial release - Sep 2016
+
+Also referred to as Angular 2+ or Angular v2 and above
+
+Why there is no ver 3 of Angular ?
+
+The angular router was on version 3.x before Angular 3 would have been released. 
+The new ver. when released would have gone with router ver 4.x
+
+In an effort to prevent confusion they skipped Angular 3 and scheduled Angular 4 to coincide with Angular router 4
+https://youtu.be/aJIMoLgqU_o?t=1098
+
+What is Node.js ?
+
+platform to develop server-side networking applications
+is open source
+is cross-platform
+
+
+Download Node JS
+=================
+https://nodejs.org/dist/v14.15.1/node-v14.15.1-x64.msi
+
+
+
+Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, and Linux.
+
+What is WebDriverJS ?
+
+Protractor is built on top of WebDriverJS
+
+WebDriverJs is the Official javascript implementation of selenium
+WebDriverJs helps to interact with elements on the web
+Protractor extends WebDriverJS functionalities to enable automation of user actions on browser applications
+
+
+
+Why we need Protractor ?
+========================
+1. Selenium webdriver does not have methods/features to locate elements based on Angular specific properties/locators
+
+Protractor is a wrapper over Selenium webdriverjs and provides support to find angular specific elements
+
+2. Synchronization issues while automating Angular (JS) applications with Selenium webdriver
+
+3. A lot of web applications these days are created with Angular and AngularJS
+
+Synchronous programming
+In a synchronous programming model, things happen one at a time. 
+Each operation has to wait for the previous one to be completed, before it can be executed.
+Asynchronous programming
+An asynchronous model allows multiple things to happen at the same time. Operations can be executed WHILE the query is being processed.
+
+
+
+
+How Protractor works
+========================
+.Test scripts send commands to the Selenium Server
+2.Selenium Server interacts with Browser Drivers
+3.Browser Drivers interact with application on the real browser
+
+On execution, test commands goes to selenium server.
+Server interprets these commands
+After interpretation, server sends commands to browser drivers
+Communication between server and browser happen through JSON Wire protocol
+Commands are interpreted by browser drivers and executed on the application running on real browsers
+
+Before performing any action on the browser, Protractor runs extra commands to ensure the application has stabilized
+This will result in 3 commands being sent to browser driver
+/session/:sessionId/execute_async 
+/session/:sessionId/element
+/session/:sessionId/element/:id/click 
+
+
+
+
+How to setup Protractor on windows
+=================================
+
+Step 1 : Download and install node.js
+ https://nodejs.org/en/download/
+ node -v
+ npm -v
+
+Step 2 : Install Protractor
+ npm install -g protractor
+ protractor --version
+
+Step 3 : Run command
+ webdriver-manager update
+
+Step 4 : Find conf.js file at C:\Users\Administrator\AppData\Roaming\npm\node_modules\protractor\example
+
+On cmd goto the location of this file
+and run command
+protractor conf.js
+
+
+
+How to setup Protractor on mac
+=======================================
+
+Step 1 : Download and install node.js
+ https://nodejs.org/en/download/
+ node -v
+ npm -v
+
+Step 2 : Install Protractor
+ npm install -g protractor
+ protractor --version
+
+Step 3 : Run command
+ webdriver-manager update
+
+Step 4 : Find conf.js file at /usr/local/lib/node_modules/protractor/example
+
+On cmd goto the location of this file
+
+and run command
+protractor conf.js
+
+
+Creating Protractor Framework on Visual Studio Code from scratch
+==============================================================
+
+
+Step 1 : Download and install Visual Studio Code
+ https://code.visualstudio.com/download#
+
+Step 2 : Open VS Code
+
+Step 3 : Install support for JavaScript and TypeScript
+
+Step 4 : Create a new folder and open in VS Code explorer
+
+Step 5 : Inside ProtractorDemo folder create 2 folders
+ conf
+ tests
+
+note : protractor uses jasmine test framework by default
+Just in case you need to install jasmine use the command
+npm install --save-dev jasmine
+
+Step 6 : Goto the folder 
+  C:\Users\Administrator\AppData\Roaming\npm\node_modules\protractor\example
+
+Copy conf.js into conf folder in VSCode
+Copy example_spec.js into tests folder in VSCode
+
+Step 7 : In conf.js update location of spec file
+
+Step 8 : Run conf.js in protractor
+ protractor conf.js
+
+
+
+How to create first test case in protractor
+=======================================
+
+1. How to create a test file
+2. How to add steps in test file
+3. How to add element locators
+4. How to run test
+conf.js - configurations like browser, framework, etc
+spec.js - tests are present in spec file
+
+
+End to End Testing
+=================
+1.End to End Test means automationg the applications workflow for a functionality end to end
+
+2.Angular has support for testing End to End tests
+
+3.Angular uses Protractor for running the end to end tests
+
+4.We can also configure the default parameters that the protractor takes.
+
+5.Running tests using Angular CLI.
+  . ng e2e
+
+Angular Testing
+=================
+1.End to End tests cover an entire functional flow of the application
+2.All of your End to End test scripts are located inside the folder /e2e
+3.All the end to end test scripts will have the file name ending with .e2e-spec.ts
+   For eg. app-e2e-spec.ts
+//All unit tests will have file name ending with .spec.ts
+4.Angular has built in support for e2e tests using Protractor
+
+5.We can find config file inside folder /e2e
+     -protractor.conf.js
+     -this is where all the defaults are mentioned for e2e
+6.We can customize theses options based on our requirements
+7.To run E2E tests -we will run the command
+         - ng e2e
+8.Protractor is built on the top of webdriver
+9.By default Protractor uses Chrome which will download the chrome driver if it's not present
+10.The protractor will give the execution report of total 
+         -total failed
+         -passed
+
+11.we can change the browser we want give preference
+         -protractor.conf.js
+
+12.By default port :4200
+         ng e2e --port=4300
+         -baseurl
+13.Generate code coverage report
+
+
+
+
+Ways to Skip Tests
+===================
+For New Applications
+
+ng new --skipTests
+
+    ng new <application-name>  --skipTests
+
+
+For Existing Applications
+=========================
+
+angular.json
+===========
+skipTests:true
+
+ng g s  services/Hello --skipTests=true
+
+For Some tests
+
+ By adding x infront of the tests
+   
+    xdescribe
+    xit
+
+
+
+
+Ways To Run the specific Tests
+==========================
+
+1.For Unit Tests:  By adding "f" in front of the tests
+              fdescribe
+                  fit
+                  fit
+
+2.For End toEnd Tests :By adding specific specs in the e2e spec definitions
+
+         In protractor.conf.js -> mention which specs we need to run
+ 
+
+
+
+
+Generate Code Coverage report -
+=============================
+Angular has support for generating code coverage test reports
+
+Most if not all clients will ask you to submit the test code coverage report
+
+If the code coverage is more than 85% your code is considered  to be good
+
+We can generate code coverage for both
+          For Unit Tests
+          For E2E
+
+For Unit Tests
+     By adding codeCoverage in tests inside angular.json   codeCoverage:true
+     By adding th CLI ng test option --codeCoverage
+
+  
+
+
+
+
+
+sample conf file and example for protractor
+
+C:\Users\PRADEEP\AppData\Roaming\npm\node_modules\protractor\example
+
+
+
+https://www.youtube.com/watch?v=p8ENoeZENhk&list=PLhW3qG5bs-L_dgIr3hiOlnNIO8NGlXQnP
 
 
 
